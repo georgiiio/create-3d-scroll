@@ -1,1 +1,49 @@
 @import url(reset.css);
+
+:root{
+  --index: calc(1vw + 1vh);
+  --gutter: 30px;
+  --side-small: 26;
+  --side-big: 36;
+}
+
+@font-face {
+  font-family: raleway_c;
+  src: url(../fonts/raleway-v22-cyrillic-300.woff2);
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: raleway_c;
+  src: url(../fonts/raleway-v22-cyrillic-100.woff2);
+  font-weight: 100;
+}
+
+body{
+  background-color: #000;
+  color: #fff;
+  font-size: calc(var(--index) * .8);
+  font-family: raleway_c, sans-serif;
+  line-height: 1.75;
+}
+
+.container{
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  perspective: 1500px;
+}
+
+.gallery{
+  transform-style: preserve-3d;
+  height: 100%;
+}
+
+.frame{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
