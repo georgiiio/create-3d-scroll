@@ -6,6 +6,7 @@
   --side-small: 26;
   --side-big: 36;
   --depth: 4000px;
+  --transition: .75s cubic-bezier(.075, .5, 0, 1);
 }
 
 @font-face {
@@ -27,6 +28,7 @@ body{
   font-family: raleway_c, sans-serif;
   line-height: 1.75;
   height: var(--depth);
+  font-weight: 300;
 }
 
 .container{
@@ -48,6 +50,7 @@ body{
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: opacity .75s ease;
+  transition: var(--transition), opacity .75s ease;
   will-change: transform;
+  transform-style: preserve-3d;
 }
