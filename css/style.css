@@ -21,6 +21,11 @@
   font-weight: 100;
 }
 
+h1, h2, h3, h4{
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
 body{
   background-color: #000;
   color: #fff;
@@ -53,4 +58,29 @@ body{
   transition: var(--transition), opacity .75s ease;
   will-change: transform;
   transform-style: preserve-3d;
+}
+
+.frame h2{
+  text-align: center;
+  font-size: calc(var(--index) * 3.3);
+}
+
+.frame-media{
+  position: relative;
+  height: calc(var(--index) * var(--side-big));
+  width: calc(var(--index) * var(--side-small));;
+  background-position: center;
+  background-size: cover;
+}
+
+.frame-media-left{
+  right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+.frame-media-right{
+  left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+.frame_bg{
+  background-color: rgb(0 0 0 / .88);
 }
