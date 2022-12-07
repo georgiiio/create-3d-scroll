@@ -99,3 +99,17 @@ video.frame-media-right {
 video.frame-media-left{
   right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
 }
+
+.text-right > * {
+  position: relative;
+  left: 18vw;
+}
+
+.frame h3 {
+  font-size: calc(var(--index) * 3);
+}
+
+.frame p {
+  max-width: 30vw;
+  margin-top: 5vh;
+}
