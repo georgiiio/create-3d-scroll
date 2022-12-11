@@ -3,7 +3,6 @@ let zSpacing = -1000,
   $frames = document.getElementsByClassName('frame'),
   frames = Array.from($frames),
   zVals = []
-  console.log('123')
 
 window.onscroll = function(){
   let top = document.documentElement.scrollTop,
