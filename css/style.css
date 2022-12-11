@@ -118,3 +118,16 @@ video.frame-media-left{
   max-width: 30vw;
   margin-top: 5vh;
 }
+
+.soundbutton {
+  position: fixed;
+  bottom: 5vh;
+  right: 5vw;
+  cursor: pointer;
+  width: 24px;
+  transition: .3s ease;
+}
+
+.soundbutton.paused {
+  opacity: .25;
+}

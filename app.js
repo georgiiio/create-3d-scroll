@@ -1,8 +1,8 @@
 let zSpacing = -1000, 
-  lastPos = zSpacing / 5,
-  $frames = document.getElementsByClassName('frame'),
-  frames = Array.from($frames),
-  zVals = []
+    lastPos = zSpacing / 5,
+    $frames = document.getElementsByClassName('frame'),
+    frames = Array.from($frames),
+    zVals = []
 
 window.onscroll = function(){
   let top = document.documentElement.scrollTop,
@@ -21,3 +21,20 @@ window.onscroll = function(){
 }
 
 window.scrollTo(0,1)
+
+//Audio
+let soundbutton = document.querySelector('.soundbutton'),
+    audio = document.querySelector('.audio')
+
+soundbutton.addEventListener('click', e => {
+  soundbutton.classList.toggle('paused')
+  audio.paused ? audio.play() : audio.pause()
+})
+
+window.onfocus = function(){
+  soundbutton.classList.contains('paused') ? audio.pause() : audio.play()
+}
+
+window.onblur = function(){
+  audio.pause()
+}
